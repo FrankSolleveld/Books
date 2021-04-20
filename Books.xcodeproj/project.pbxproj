@@ -11,6 +11,8 @@
 		95AD4EFE262F00B40009A693 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4EFD262F00B40009A693 /* ContentView.swift */; };
 		95AD4F00262F00B60009A693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AD4EFF262F00B60009A693 /* Assets.xcassets */; };
 		95AD4F03262F00B60009A693 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AD4F02262F00B60009A693 /* Preview Assets.xcassets */; };
+		95AD4F0C262F02940009A693 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4F0B262F02940009A693 /* Book.swift */; };
+		95AD4F13262F04560009A693 /* BookSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4F12262F04560009A693 /* BookSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		95AD4EFF262F00B60009A693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95AD4F02262F00B60009A693 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95AD4F04262F00B60009A693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95AD4F0B262F02940009A693 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		95AD4F12262F04560009A693 /* BookSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				95AD4EFB262F00B40009A693 /* BooksApp.swift */,
-				95AD4EFD262F00B40009A693 /* ContentView.swift */,
+				95AD4F0E262F02990009A693 /* Models */,
+				95AD4F10262F02A60009A693 /* Views */,
 				95AD4EFF262F00B60009A693 /* Assets.xcassets */,
 				95AD4F04262F00B60009A693 /* Info.plist */,
 				95AD4F01262F00B60009A693 /* Preview Content */,
@@ -67,6 +72,23 @@
 				95AD4F02262F00B60009A693 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95AD4F0E262F02990009A693 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95AD4F0B262F02940009A693 /* Book.swift */,
+				95AD4F12262F04560009A693 /* BookSearchManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95AD4F10262F02A60009A693 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95AD4EFD262F00B40009A693 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +162,8 @@
 			files = (
 				95AD4EFE262F00B40009A693 /* ContentView.swift in Sources */,
 				95AD4EFC262F00B40009A693 /* BooksApp.swift in Sources */,
+				95AD4F13262F04560009A693 /* BookSearchManager.swift in Sources */,
+				95AD4F0C262F02940009A693 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
