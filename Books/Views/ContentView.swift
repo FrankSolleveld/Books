@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     // MARK: Custom Variables
     @State private var isPresented = false
     @State private var isbn: String?
+    @State private var foundBooks: Books?
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("About this book")) {
-                    Text("Book Title")
-                    Text("Book Subtitle")
-                    Text("Author")
+                    Text("\(foundBooks?.items.first?.volumeInfo.title ?? "Title")")
+                    Text("\(foundBooks?.items.first?.volumeInfo.subtitle ?? "Book Subtitle")")
+                    Text("\(foundBooks?.items.first?.volumeInfo.authors.first ?? "Author")")
                 }
                 Section(header: Text("Additional info")) {
-                    Text("Published date")
-                    Text("Pages")
-                    Text("Language")
-                    Text("ISBN")
+                    Text("\(foundBooks?.items.first?.volumeInfo.publishedDate ?? "Published date")")
+                    Text("\(foundBooks?.items.first?.volumeInfo.pageCount ?? 0) Pages")
+                    Text("\(foundBooks?.items.first?.volumeInfo.language ?? "Language")")
+                    Text("ISBN: \(isbn ?? "")")
                 }
             }
             .navigationBarTitle("Books 📚")
             .navigationBarItems(trailing: Button(action: { self.isPresented.toggle() }) { Image(systemName: "barcode") }
                 .sheet(isPresented: $isPresented) {
-                    // Actions here
+                    BarCodeScanner(isbn: $isbn, foundBooks: $foundBooks)
                 }
             )
         }
